@@ -1,7 +1,5 @@
 package quickbase.internal.index;
 
-import gnu.trove.TIntProcedure;
-
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.DataInputStream;
@@ -11,6 +9,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import gnu.trove.procedure.TIntProcedure;
 import quickbase.exception.BasicFileOperationDatabaseException;
 
 

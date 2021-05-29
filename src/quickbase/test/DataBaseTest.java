@@ -1,10 +1,9 @@
 package quickbase.test;
 
-import gnu.trove.TIntIntHashMap;
-
 import java.io.File;
 import java.util.Random;
 
+import gnu.trove.map.hash.TIntIntHashMap;
 import quickbase.SingleMapDatabase;
 import quickbase.exception.BasicFileOperationDatabaseException;
 import quickbase.exception.DatabaseClosedDatabaseException;
@@ -101,7 +100,7 @@ public class DataBaseTest {
 	    long t1 = System.nanoTime();
         System.out.println((t1 - t0)/1000/1000);
 	    long size = 0;
-	    for (int val: controlMap.getValues()){
+	    for (int val: controlMap.values()){
 	        size += val;
 	    }
 	    System.out.println(size);

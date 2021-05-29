@@ -35,13 +35,19 @@ import quickbase.service.IVisitor;
  * stores its entries to a file. It is basically as fast as it gets without
  * caching values. Note that thanks to the automatic file caching most operating
  * systems do, most gets are still much faster than disk-seek time.
- * Specification: Maximum total size: Long.MAX_VALUE bytes Maximum key size:
- * Short.MAX_VALUE bytes Maximum entry size: Integer.MAX_VALUE bytes Maximum
- * number of entries: Unlimited. However, performance takes severe hits the
+ * 
+ * Specification:
+ *  Maximum total size: Long.MAX_VALUE bytes
+ *  Maximum key size: Short.MAX_VALUE bytes
+ *  Maximum entry size: Integer.MAX_VALUE bytes
+ *  Maximum number of entries: Unlimited. However, performance takes severe hits the
  * closer you get to Integer.MAX_VALUE entries as a four-byte hash is used and
- * collisions get more likely. Typical performance: 5000 reads or writes per
- * second. Less for large values. Storage overhead: about 30 bytes per entry
- * plus not yet collected deleted entries. Compaction / garbage collection: Once
+ * collisions get more likely.
+ * 
+ * Typical performance: 5000 reads or writes per second. Less for large values.
+ * Storage overhead: about 30 bytes per entry plus not yet collected deleted entries.
+ * 
+ * Compaction / garbage collection: Once
  * less than 60% (can also be set to other values) of the database is occupied
  * by deleted entries, compaction takes place. Compaction copies all existing
  * entries into a new database and might take a while. Compaction requires at

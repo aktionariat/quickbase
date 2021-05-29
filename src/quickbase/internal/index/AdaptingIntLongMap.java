@@ -5,15 +5,15 @@
  */
 package quickbase.internal.index;
 
-import gnu.trove.TIntIntHashMap;
-import gnu.trove.TIntIntProcedure;
-import gnu.trove.TIntLongHashMap;
-import gnu.trove.TIntLongProcedure;
-import gnu.trove.TIntProcedure;
-
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
+
+import gnu.trove.map.hash.TIntIntHashMap;
+import gnu.trove.map.hash.TIntLongHashMap;
+import gnu.trove.procedure.TIntIntProcedure;
+import gnu.trove.procedure.TIntLongProcedure;
+import gnu.trove.procedure.TIntProcedure;
 
 public class AdaptingIntLongMap {
 

@@ -1,11 +1,10 @@
 package quickbase.test;
 
-import gnu.trove.TIntIntHashMap;
-import gnu.trove.TIntObjectHashMap;
-
 import java.io.File;
 import java.util.Random;
 
+import gnu.trove.map.hash.TIntIntHashMap;
+import gnu.trove.map.hash.TIntObjectHashMap;
 import quickbase.MultiMapDatabase;
 import quickbase.exception.BasicFileOperationDatabaseException;
 import quickbase.exception.DatabaseException;
@@ -88,7 +87,7 @@ public class MixedMapTest {
         System.out.println((t1 - t0) / 1000 / 1000);
         multi.close();
         long size = 0;
-        for (int val : controlMap.getValues()) {
+        for (int val : controlMap.values()) {
             size += val;
         }
         System.out.println(size);

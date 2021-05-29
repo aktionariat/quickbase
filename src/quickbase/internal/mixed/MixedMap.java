@@ -16,7 +16,6 @@ import quickbase.internal.entries.RuntimeExceptionCatchingSerializerWrapper;
 import quickbase.serializer.ISerializer;
 import quickbase.service.IPersistedMap;
 import quickbase.service.IVisitor;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class MixedMap<K, V> implements IPersistedMap<K, V> {
 
@@ -70,7 +69,7 @@ public class MixedMap<K, V> implements IPersistedMap<K, V> {
     }
 
     public void clear() throws DatabaseClosedDatabaseException, BasicFileOperationDatabaseException {
-        throw new NotImplementedException();
+        throw new RuntimeException("Not implemented.");
     }
 
 }
